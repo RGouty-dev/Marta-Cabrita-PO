@@ -649,7 +649,11 @@ html[lang="en"] .legal-lang-note { display: block; }
 /* Perguntas frequentes: cabeçalho alinhado à esquerda, como as outras secções */
 .faq .section-head { text-align: left; margin-inline: 0; max-width: 40rem; }
 .faq .section-head .eyebrow::before { display: block; }
-  </style>
+  
+/* Botões de marcação em dourado */
+.btn.btn-gold, .btn.btn-whatsapp { --bg: #BF9829; border-color: #BF9829; color: #fff; }
+.btn.btn-gold:hover, .btn.btn-whatsapp:hover { --bg: #926C15; border-color: #926C15; color: #fff; box-shadow: 0 8px 22px rgb(146 108 21 / .3); }
+</style>
 
   <!-- Dados estruturados (SEO) -->
   <script type="application/ld+json">
@@ -769,7 +773,7 @@ html[lang="en"] .legal-lang-note { display: block; }
           <li><a data-i18n="k4" href="#servicos">Serviços</a></li>
           <li><a data-i18n="k5" href="#metodo">Método</a></li>
           <li><a data-i18n="k6" href="#faq">FAQ</a></li>
-          <li><a data-i18n="k7" data-i18n-href="wa_book" class="btn btn-small" href="https://wa.me/351927835160?text=Ol%C3%A1%20Marta%2C%20gostaria%20de%20marcar%20uma%20visita." rel="noopener" target="_blank">Marcar visita</a></li>
+          <li><a data-i18n="k7" data-i18n-href="wa_book" class="btn btn-small btn-gold" href="https://wa.me/351927835160?text=Ol%C3%A1%20Marta%2C%20gostaria%20de%20marcar%20uma%20visita." rel="noopener" target="_blank">Marcar visita</a></li>
           <li class="lang-item">
             <div class="lang-switch" role="group" aria-label="Idioma">
               <button type="button" lang="pt" data-lang="pt" aria-pressed="true" title="Português">PT</button>
@@ -2315,6 +2319,14 @@ html[lang="en"] .legal-lang-note { display: block; }
   const year = document.getElementById('ano');
   if (year) year.textContent = new Date().getFullYear();
 })();
+  </script>
+<script>
+  document.querySelector('.brand').addEventListener('click', function (e) {
+    e.preventDefault();
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+    if (location.hash) history.replaceState(null, '', location.pathname + location.search);
+  });
   </script>
 </body>
 </html>

@@ -632,7 +632,11 @@ html[lang="en"] .legal-lang-note { display: block; }
 .site-footer .copyright { opacity: .92; }
 .btn:hover { --bg: var(--aqua-700); box-shadow: 0 8px 22px rgb(15 125 112 / .32); }
 .btn-whatsapp:hover { --bg: var(--aqua-700); }
-  </style>
+  
+/* Botões de marcação em dourado */
+.btn.btn-gold, .btn.btn-whatsapp { --bg: #BF9829; border-color: #BF9829; color: #fff; }
+.btn.btn-gold:hover, .btn.btn-whatsapp:hover { --bg: #926C15; border-color: #926C15; color: #fff; box-shadow: 0 8px 22px rgb(146 108 21 / .3); }
+</style>
   <!-- Pré-carrega a outra página para a navegação ser instantânea -->
   <script type="speculationrules">{"prerender":[{"where":{"href_matches":"*index.html*"},"eagerness":"moderate"}]}</script>
   <link rel="prefetch" href="index.html">
@@ -658,7 +662,7 @@ html[lang="en"] .legal-lang-note { display: block; }
           <li><a data-i18n="k4" href="index.html#servicos">Serviços</a></li>
           <li><a data-i18n="k5" href="index.html#metodo">Método</a></li>
           <li><a data-i18n="k6" href="index.html#faq">FAQ</a></li>
-          <li><a data-i18n="k7" data-i18n-href="wa_book" class="btn btn-small" href="https://wa.me/351927835160?text=Ol%C3%A1%20Marta%2C%20gostaria%20de%20marcar%20uma%20visita." rel="noopener" target="_blank">Marcar visita</a></li>
+          <li><a data-i18n="k7" data-i18n-href="wa_book" class="btn btn-small btn-gold" href="https://wa.me/351927835160?text=Ol%C3%A1%20Marta%2C%20gostaria%20de%20marcar%20uma%20visita." rel="noopener" target="_blank">Marcar visita</a></li>
           <li class="lang-item">
             <div class="lang-switch" role="group" aria-label="Idioma">
               <button type="button" lang="pt" data-lang="pt" aria-pressed="true" title="Português">PT</button>
